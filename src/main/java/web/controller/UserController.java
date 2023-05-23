@@ -58,7 +58,6 @@ public class UserController {
                          BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return "/new";
-        user.setId(0L);
         userService.createUser(user);
         return "redirect:/";
     }

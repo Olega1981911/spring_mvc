@@ -26,9 +26,7 @@ public class UserServiceImp implements UserService {
     @Override
     @Transactional
     public void createUser(User user) {
-        if (user.getId() == 0) {
-            userRepository.createUser(user);
-        }
+        userRepository.createUser(user);
     }
 
     @Override
